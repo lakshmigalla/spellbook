@@ -23,8 +23,10 @@ button.addEventListener('click', changeHeading)
 
 submitButton.addEventListener('click', addHeading)
 
-window.addEventListener('keydown', function (ev) {
+const input = document.getElementById('heading')
+input.addEventListener('keydown', function (ev) {
     if (ev.keyCode == 13) {
-        addHeading()
+        event.preventDefault()
+        document.getElementById('submit').click()
     }
 });
