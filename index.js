@@ -16,7 +16,9 @@ function changeHeading() {
 function addHeading() {
     let added = document.querySelector('input').value
     const title4 = document.getElementById('changed')
-    title4.textContent = added
+    title4.innerHTML += '<p>' + added + '</p>'
+
+    document.querySelector('input').value = ''
 }
 
 button.addEventListener('click', changeHeading)
