@@ -7,9 +7,9 @@ function changeHeading() {
     const title = document.querySelector('h1')
     const title2 = document.querySelector('h2')
     const title3 = document.getElementById('xtern');
-    title.textContent = 'Session 2 Day 1'
-    title2.textContent = 'Hi!'
-    title3.textContent = 'Techpoint Bootcamp'
+    title.textContent = 'Book of Spells'
+    title2.textContent = 'Expelliarmus'
+    title3.textContent = 'Avada Kedavra'
     button.textContent = 'Clicked'
 }
 
