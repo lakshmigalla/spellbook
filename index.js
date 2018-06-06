@@ -34,7 +34,7 @@ button.addEventListener('click', changeHeading)
 
 submitButton.addEventListener('click', addHeading)
 
-const input = document.getElementById('heading')
+const input = document.getElementById("input list")
 input.addEventListener('keydown', function (ev) {
     if (ev.keyCode == 13) {
         event.preventDefault()
