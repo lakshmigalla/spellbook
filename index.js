@@ -14,7 +14,7 @@ function changeHeading() {
 }
 
 function addHeading() {
-    let added = document.querySelector('input').value
+    let added = document.querySelector('input').value || document.querySelector('input[name = "spell"]:checked').value
     const title4 = document.getElementById('changed')
     title4.innerHTML += '<p>' + added + '</p>'
 
