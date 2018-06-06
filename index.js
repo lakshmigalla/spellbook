@@ -21,8 +21,8 @@ function addHeading() {
     // title4.innerHTML += '<p>' + added + '</p>'
     
     // const node = document.createTextNode(added)
-    const node = document.createElement("input")
-    node.value = added
+    const node = document.createElement("li")
+    node.textContent = added
     const br = document.createElement("br");
     title4.appendChild(node)
     title4.appendChild(br);
