@@ -16,6 +16,7 @@ function changeHeading() {
 function addHeading() {
 
     let added = document.querySelector('input').value || document.querySelector('input[name = "spell"]:checked').value
+    
     const title4 = document.getElementById('changed')
 
     // title4.innerHTML += '<p>' + added + '</p>'
@@ -23,9 +24,15 @@ function addHeading() {
     // const node = document.createTextNode(added)
     const node = document.createElement("li")
     node.textContent = added
+    if (document.querySelector('input[name = "spell"]:checked').value == added) {
+        node.setAttribute("style", "color:gold;")
+    }
+    else {
+        node.setAttribute("style", "color:white;")
+    }
     const br = document.createElement("br");
     title4.appendChild(node)
-    title4.appendChild(br);
+    title4.appendChild(br)
     
     document.querySelector('input').value = ''
 }

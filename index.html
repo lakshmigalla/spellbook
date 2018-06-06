@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Spellbook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
-<body style= "background-color:crimson" text = "white" align = "center">
+<body style= "background-color:crimson" text = "cyan" align = "center">
     <h1>Spellbook</h1>
     <h2 id = "hero">Harry Potter</h2>
     <h2 id = "xtern">Voldemort</h2>
@@ -16,9 +17,9 @@
     <form>
         <br>
         <h3>Type a spell and click submit or press enter once done:</h3> 
-            <input type= "text" name = "enter" id = "input list">
+            <input type= "text" name = "enter" id = "input list">     
             <br>
-        <h3>Or choose among the common spells:</h3>     
+        <h3>Or choose among the common spells:</h3>
             <input type = "radio" id = "radio list" name = "spell" value = "Lumos" checked>Lumos &emsp;
             <input type = "radio" id = "radio list" name = "spell" value = "Accio">Accio &emsp;
             <input type = "radio" id = "radio list" name = "spell" value = "Wingardium Leviosa">Wingardium Leviosa &emsp;
@@ -27,6 +28,7 @@
     <br>
     <button id = "submit">Submit</button>
     <h4 id = "changed"></h4>
+    <h4 id = "changed2"></h4>
     <script src="index.js"></script>
 </body>
 </html>
