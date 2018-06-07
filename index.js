@@ -2,7 +2,7 @@ console.log('testing')
 
 const button = document.getElementById('title')
 const submitButton = document.getElementById('submit')
-//const deleteButton
+
 const array = []
 function changeHeading() {
     const title = document.querySelector('h1')
@@ -14,17 +14,17 @@ function changeHeading() {
     button.textContent = 'Clicked'
 }
 
-function addHeading() {
+function addListItem() {
 
     let added = document.querySelector('input').value || document.querySelector('input[name = "spell"]:checked').value
     
-    const title4 = document.getElementById('changed')
+    const listOfItems = document.getElementById('changed')
 
-    // title4.innerHTML += '<p>' + added + '</p>'
+    // listOfItems.innerHTML += '<p>' + added + '</p>'
     
     // const node = document.createTextNode(added)
     const node = document.createElement("li")
-    node.textContent = added
+    node.innerHTML = added + "&emsp;<button class = 'btn'>Delete</button>"
     array.push(node.textContent)
     if (document.querySelector('input[name = "spell"]:checked').value == added) {
         node.setAttribute("style", "color:gold;")
@@ -32,16 +32,23 @@ function addHeading() {
     else {
         node.setAttribute("style", "color:white;")
     }
-    const br = document.createElement("br");
-    title4.appendChild(node)
-    title4.appendChild(br)
-    
+     
+    listOfItems.appendChild(node)
+   
     document.querySelector('input').value = ''
+ 
+    //for (let i = 0; i < array.length; i++) {
+        listOfItems.addEventListener('click', function(e) {
+            if (e.target.nodeName == "BUTTON") {
+                e.target.parentNode.remove()
+            }
+        })
+    //}
 }
 
 button.addEventListener('click', changeHeading)
 
-submitButton.addEventListener('click', addHeading)
+submitButton.addEventListener('click', addListItem)
 
 const input = document.getElementById("input list")
 input.addEventListener('keydown', function (ev) {
