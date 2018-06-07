@@ -24,8 +24,9 @@ function addListItem() {
     
     // const node = document.createTextNode(added)
     const node = document.createElement("li")
-    node.innerHTML = added + "&emsp;<button class = 'btn'>Delete</button>"
-    array.push(node.textContent)
+    node.innerHTML = added + "    <button class = 'btn'>Delete</button>" 
+    //array.push(node.textContent)
+    array.push(added)
     if (document.querySelector('input[name = "spell"]:checked').value == added) {
         node.setAttribute("style", "color:gold;")
     }
@@ -37,13 +38,17 @@ function addListItem() {
    
     document.querySelector('input').value = ''
  
-    //for (let i = 0; i < array.length; i++) {
         listOfItems.addEventListener('click', function(e) {
             if (e.target.nodeName == "BUTTON") {
                 e.target.parentNode.remove()
+                for (let i = 0; i < array.length; i++) {
+                    if (e.target.parentNode.textContent === array[i] + "    Delete") {
+                        array.splice(i, 1)
+                    }
+                }
             }
         })
-    //}
+    
 }
 
 button.addEventListener('click', changeHeading)
