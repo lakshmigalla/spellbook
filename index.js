@@ -2,7 +2,8 @@ console.log('testing')
 
 const button = document.getElementById('title')
 const submitButton = document.getElementById('submit')
-
+//const deleteButton
+const array = []
 function changeHeading() {
     const title = document.querySelector('h1')
     const title2 = document.querySelector('h2')
@@ -24,6 +25,7 @@ function addHeading() {
     // const node = document.createTextNode(added)
     const node = document.createElement("li")
     node.textContent = added
+    array.push(node.textContent)
     if (document.querySelector('input[name = "spell"]:checked').value == added) {
         node.setAttribute("style", "color:gold;")
     }
