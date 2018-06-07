@@ -10,7 +10,7 @@ function changeHeading() {
     const title3 = document.getElementById('xtern');
     title.textContent = 'Book of Spells'
     title2.textContent = 'Expelliarmus'
-    title3.textContent = 'Avada Kedavra'
+    title3.textContent = 'Muffliato'
     button.textContent = 'Clicked'
 }
 
@@ -22,7 +22,6 @@ function addListItem() {
 
     // listOfItems.innerHTML += '<p>' + added + '</p>'
     
-    // const node = document.createTextNode(added)
     const node = document.createElement("li")
     node.innerHTML = added + "    <button class = 'btn'>Delete</button>" 
     //array.push(node.textContent)
@@ -48,8 +47,9 @@ function addListItem() {
                 }
             }
         })
-    
 }
+
+// make more buttons - edit and favorite buttons
 
 button.addEventListener('click', changeHeading)
 
