@@ -9,17 +9,11 @@ function changeHeading() {
     const title2 = document.querySelector('h2')
     const title3 = document.getElementById('xtern');
     title.textContent = 'Book of Spells'
-    title2.textContent = 'Expelliarmus'
-    title3.textContent = 'Muffliato'
+    // title2.textContent = 'Protection Spell'
+    // title3.textContent = 'Patronus'
     button.textContent = 'Clicked'
 }
 
-// save() {
-//     localStorage.setItem(
-//         'listOfItems',
-//         JSON.stringify(this.listOfItems)
-//     )
-// }
 
 function addListItem() {
 
@@ -47,24 +41,42 @@ function addListItem() {
     const deleteButton = document.createElement("button")
     deleteButton.innerHTML = 'Delete'
     node.appendChild(deleteButton)
-     
+
+    deleteButton.addEventListener('click', function() {
+        deleteButton.parentNode.remove()
+        for (let i = 0; i < array.length; i++) {
+            if (deleteButton.parentNode.textContent === array[i] + "Delete" + "Like" + "Unlike") {
+                array.splice(i, 1)
+            }
+        }
+    })
+
+    const editButton = document.getElementById("edit")
+
+    editButton.addEventListener('click', function() {
+        document.getElementById("changed").contentEditable = true
+    })
+
+    const favButton = document.createElement("button")
+    favButton.innerHTML = 'Like'
+    node.appendChild(favButton)
+
+    favButton.addEventListener('click', function() {
+        node.style.color = "#008000"
+    })
+
+    const unfavButton = document.createElement("button")
+    unfavButton.innerHTML = "Unlike"
+    node.appendChild(unfavButton)
+
+    unfavButton.addEventListener('click', function() {
+        node.style.color = "purple"
+    })
+
     listOfItems.appendChild(node)
     document.querySelector('input').value = ''
- 
-        listOfItems.addEventListener('click', function(e) {
-            if (e.target.nodeName == "BUTTON") {
-                e.target.parentNode.remove()
-                for (let i = 0; i < array.length; i++) {
-                    if (e.target.parentNode.textContent === array[i] + "Delete") {
-                        array.splice(i, 1)
-                    }
-                }
-            }
-        })
+    
 }
-
-// make more buttons - edit and favorite buttons
-
 
 button.addEventListener('click', changeHeading)
 
