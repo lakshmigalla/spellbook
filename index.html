@@ -2,13 +2,19 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Spellbook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
-<body text = "cyan" align = "center">
+<body text = "black" align = "center">
+    <!-- <div class = "cover-page">
+        
+    </div> -->
+    <div id = "main-page">
+      
     <h1>Spellbook</h1>
     <h2 id = "hero">Protego Totalum</h2>
     <h2 id = "xtern">Expecto Patronum</h2>
@@ -17,7 +23,7 @@
     <form>
         <br>
         <h3>Type a spell and click submit or press enter once done:</h3> 
-            <input type= "text" name = "enter" id = "input list">     
+            <input type= "text" name = "enter" id = "input list" placeholder = "Type a spell">     
             <br>
         <h3>And choose among the wands:</h3>
             <input type = "radio" id = "radio list" name = "spell" value = "Holly, Phoenix Feather", checked>Holly, Phoenix Feather &emsp;
@@ -31,6 +37,8 @@
     <button id = "submit">Submit</button>
     <h4 id = "changed"></h4>
     <h4 id = "changed2"></h4>
+    
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

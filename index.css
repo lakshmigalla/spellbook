@@ -1,3 +1,22 @@
+/* .cover-page {
+    background-image: url("magicwand.gif");
+    height:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    padding-bottom: 140px;
+    padding-top: 140px;   
+} */
+
+/* .main-page {
+    background-image: url("magic-5.jpg");
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 140px;  
+} */ 
+
 body {
     background-image: url("magic-5.jpg");
     background-size: cover;

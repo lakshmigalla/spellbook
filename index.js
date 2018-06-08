@@ -38,14 +38,14 @@ function addListItem() {
     //node.innerHTML = added
     node.innerText = added + " - "
     
-    node.setAttribute("style", "color:white;")
+    node.setAttribute("style", "color:purple;")
 
     node.appendChild(wandText)
 
     array.push(node.innerText)
 
     const deleteButton = document.createElement("button")
-    deleteButton.innerHTML = "Delete"
+    deleteButton.innerHTML = 'Delete'
     node.appendChild(deleteButton)
      
     listOfItems.appendChild(node)
