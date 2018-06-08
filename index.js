@@ -14,34 +14,48 @@ function changeHeading() {
     button.textContent = 'Clicked'
 }
 
+// save() {
+//     localStorage.setItem(
+//         'listOfItems',
+//         JSON.stringify(this.listOfItems)
+//     )
+// }
+
 function addListItem() {
 
-    let added = document.querySelector('input').value || document.querySelector('input[name = "spell"]:checked').value
+    //let added = document.querySelector('input').value || document.querySelector('input[name = "spell"]:checked').value
+    const added = document.querySelector('input').value
+
+    const wand = document.querySelector('input[name = "spell"]:checked').value
+    const wandText = document.createTextNode(wand)
+    //wandText.innerHTML += "    <button class = 'btn'>Delete</button>" 
     
     const listOfItems = document.getElementById('changed')
 
     // listOfItems.innerHTML += '<p>' + added + '</p>'
     
     const node = document.createElement("li")
-    node.innerHTML = added + "    <button class = 'btn'>Delete</button>" 
-    //array.push(node.textContent)
-    array.push(added)
-    if (document.querySelector('input[name = "spell"]:checked').value == added) {
-        node.setAttribute("style", "color:gold;")
-    }
-    else {
-        node.setAttribute("style", "color:white;")
-    }
+    //node.innerHTML = added
+    node.innerText = added + " - "
+    
+    node.setAttribute("style", "color:white;")
+
+    node.appendChild(wandText)
+
+    array.push(node.innerText)
+
+    const deleteButton = document.createElement("button")
+    deleteButton.innerHTML = "Delete"
+    node.appendChild(deleteButton)
      
     listOfItems.appendChild(node)
-   
     document.querySelector('input').value = ''
  
         listOfItems.addEventListener('click', function(e) {
             if (e.target.nodeName == "BUTTON") {
                 e.target.parentNode.remove()
                 for (let i = 0; i < array.length; i++) {
-                    if (e.target.parentNode.textContent === array[i] + "    Delete") {
+                    if (e.target.parentNode.textContent === array[i] + "Delete") {
                         array.splice(i, 1)
                     }
                 }
@@ -50,6 +64,7 @@ function addListItem() {
 }
 
 // make more buttons - edit and favorite buttons
+
 
 button.addEventListener('click', changeHeading)
 
@@ -62,3 +77,4 @@ input.addEventListener('keydown', function (ev) {
         document.getElementById('submit').click()
     }
 });
+
