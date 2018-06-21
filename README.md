@@ -1,0 +1,1 @@
+This project was developed during Xtern Bootcamp 2018 Session 2 held at Marian University and taught by Davey Strus and Dana Palazzo from Fretless.
